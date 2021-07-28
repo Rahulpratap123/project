@@ -1,0 +1,67 @@
+<html>
+<head>
+<title>music</title>
+<link rel="stylesheet" href="music.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="photo/music.png" class="logo">
+            
+            <ul>
+                          <li> <a href="#">HOME</a> </li> 
+                        <li> <a href="#">CONTACT</a> </li> 
+                       <li> <a href="#">SIGN IN</a> </li> 
+                     <li> <a href="#">SIGN UP</a> </li>
+                        
+        
+            </ul>
+           
+        </div>
+
+        <div class="content">
+
+            <div class="leftcol">
+                <h1>MUSIC <BR>IS WORLD<br><p>FEEL THE SHOUL FROM INNER OF THE HEART<br>  Most music includes people singing with their voices or <br>
+                    playing musical instruments, 
+                    <br>such as the piano, guitar, drums or violin.     </p></h1>
+            </div>
+
+            <div class="rightcol">
+                <p>CLICK HERE TO LISTEN</p>
+                <img src="photo/play.png" id="icon">
+            </div>
+        </div>
+            <div class="dance">
+             <img src="photo/dance.png">
+            </div>
+
+    </div>
+
+    <audio id="mySong">
+        <source src="music/heavy.mp3" type="audio/mp3">
+    </audio>
+
+    <script>
+        var mySong = document.getElementById("mySong");
+        var icon =document.getElementById("icon");
+        icon.onclick = function()
+        {
+           if(mySong.paused)
+           {
+               mySong.play();
+               icon.src ="photo/pause.png";
+           }
+           else
+           {
+               mySong.pause();
+               icon.src = "photo/play.png";
+           }
+        }
+    </script>
+ 
+
+
+
+</body>
+</html>
